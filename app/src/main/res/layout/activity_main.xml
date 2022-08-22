@@ -8,52 +8,24 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/resultTV"
-        android:layout_width="270dp"
-        android:layout_height="62dp"
-        android:text="Result"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button5"
         android:layout_width="140dp"
         android:layout_height="92dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="@color/pink"
-        android:onClick="findSum"
-        android:text="+"
+        android:onClick="findRemainder"
+        android:text="%"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTV" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="140dp"
-        android:layout_height="92dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="@color/pink"
-        android:onClick="findProduct"
-        android:text="X"
-        android:textSize="48sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="140dp"
         android:layout_height="92dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="@color/pink"
         android:onClick="findQuotient"
@@ -63,23 +35,23 @@
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button3"
         android:layout_width="140dp"
         android:layout_height="92dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="@color/pink"
-        android:onClick="findRemainder"
-        android:text="%"
+        android:onClick="findProduct"
+        android:text="X"
         android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="140dp"
         android:layout_height="92dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="@color/pink"
         android:onClick="findExponent"
@@ -88,24 +60,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="140dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/pink"
-        android:onClick="findDifference"
-        android:text="-"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTV" />
-
     <EditText
         android:id="@+id/num1ET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
@@ -130,5 +89,46 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num1ET" />
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="270dp"
+        android:layout_height="62dp"
+        android:text="Result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="140dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/pink"
+        android:onClick="findSum"
+        android:text="+"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTV" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="140dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/pink"
+        android:onClick="findDifference"
+        android:text="-"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

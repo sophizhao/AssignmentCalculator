@@ -8,89 +8,95 @@
     tools:context=".ThirdActivity">
 
   <Button
-      android:id="@+id/button12"
-      android:layout_width="142dp"
-      android:layout_height="83dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="40dp"
-      android:backgroundTint="@color/pink"
-      android:text="€          Euro"
-      android:textSize="20sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toEndOf="@+id/button22"
-      app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-  <Button
-      android:id="@+id/button19"
-      android:layout_width="142dp"
-      android:layout_height="73dp"
-      android:layout_marginStart="40dp"
-      android:layout_marginTop="20dp"
-      android:backgroundTint="@color/pink"
-      android:text="₹    Rupee"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/button20"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button17"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <Button
-      android:id="@+id/button17"
+      android:id="@+id/pounds"
       android:layout_width="145dp"
       android:layout_height="83dp"
-      android:layout_marginStart="40dp"
-      android:layout_marginTop="12dp"
+      android:layout_marginStart="36dp"
+      android:layout_marginTop="24dp"
       android:backgroundTint="@color/pink"
-      android:text="¥    Renminbi"
-      android:textSize="19sp"
-      app:layout_constraintEnd_toStartOf="@+id/button18"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button22" />
-
-  <Button
-      android:id="@+id/button18"
-      android:layout_width="142dp"
-      android:layout_height="84dp"
-      android:layout_marginTop="12dp"
-      android:layout_marginEnd="40dp"
-      android:backgroundTint="@color/pink"
-      android:text="C$              CAD"
-      android:textSize="20sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/button12" />
-
-  <Button
-      android:id="@+id/button22"
-      android:layout_width="145dp"
-      android:layout_height="83dp"
-      android:layout_marginStart="40dp"
-      android:layout_marginTop="20dp"
-      android:backgroundTint="@color/pink"
+      android:onClick="convertPounds"
       android:text="£      Pound"
       android:textSize="20sp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
   <Button
+      android:id="@+id/button18"
+      android:layout_width="142dp"
+      android:layout_height="84dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="40dp"
+      android:backgroundTint="@color/pink"
+      android:onClick="convertCAD"
+      android:text="C$              CAD"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+  <Button
+      android:id="@+id/button17"
+      android:layout_width="145dp"
+      android:layout_height="83dp"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="16dp"
+      android:backgroundTint="@color/pink"
+      android:onClick="convertRenminbi"
+      android:text="¥    Renminbi"
+      android:textSize="19sp"
+      app:layout_constraintEnd_toStartOf="@+id/button18"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pounds" />
+
+  <Button
+      android:id="@+id/button12"
+      android:layout_width="142dp"
+      android:layout_height="83dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="40dp"
+      android:backgroundTint="@color/pink"
+      android:onClick="convertEuros"
+      android:text="€          Euro"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.933"
+      app:layout_constraintStart_toEndOf="@+id/pounds"
+      app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+  <Button
+      android:id="@+id/button19"
+      android:layout_width="143dp"
+      android:layout_height="81dp"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="20dp"
+      android:backgroundTint="@color/pink"
+      android:onClick="convertRupees"
+      android:text="₹          Rupee"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/button20"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button17"
+      app:layout_constraintVertical_bias="0.046" />
+
+  <Button
       android:id="@+id/button20"
-      android:layout_width="141dp"
-      android:layout_height="73dp"
+      android:layout_width="142dp"
+      android:layout_height="81dp"
       android:layout_marginTop="20dp"
       android:layout_marginEnd="40dp"
       android:backgroundTint="@color/pink"
+      android:onClick="convertKRW"
       android:text="₩         Won"
       android:textSize="20sp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/button18"
-      app:layout_constraintVertical_bias="0.083" />
+      app:layout_constraintVertical_bias="0.031" />
 
   <EditText
-      android:id="@+id/editTextTextPersonName"
+      android:id="@+id/num1Currency"
       android:layout_width="289dp"
       android:layout_height="66dp"
       android:layout_marginTop="16dp"
@@ -102,26 +108,27 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
-      android:id="@+id/textView2"
+      android:id="@+id/resultCurrency"
       android:layout_width="328dp"
       android:layout_height="53dp"
       android:layout_marginTop="20dp"
-      android:text="Updated 8/23/22"
+      android:text="Updated 8/24/22"
       android:textAlignment="center"
       android:textColor="#000000"
       android:textSize="34sp"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.492"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+      app:layout_constraintTop_toBottomOf="@+id/num1Currency" />
 
   <ImageView
       android:id="@+id/imageView"
-      android:layout_width="221dp"
-      android:layout_height="107dp"
-      android:layout_marginTop="16dp"
+      android:layout_width="337dp"
+      android:layout_height="162dp"
+      android:layout_marginTop="24dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView2"
-      tools:srcCompat="@tools:sample/avatars" />
+      app:layout_constraintTop_toBottomOf="@+id/resultCurrency"
+      app:srcCompat="@drawable/usd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

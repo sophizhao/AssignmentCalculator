@@ -18,4 +18,9 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void switchCurrency(View view) {
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
 }

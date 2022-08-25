@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -35,9 +36,16 @@ public class ThirdActivity extends AppCompatActivity {
 
         String result = df.format(pounds);
 
-        image.setImageResource(pounds);
+        image.setImageResource(R.drawable.pound);
         numberSumTV.setText(result + " Pounds");
 
+        //Keyboard close on button click below from https://stackoverflow.com/a/27228592
+        try {
+            InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     public void convertEuros(View view){
@@ -49,7 +57,16 @@ public class ThirdActivity extends AppCompatActivity {
 
         String result = df.format(conversion);
 
+        image.setImageResource(R.drawable.euro);
         numberSumTV.setText(result + " Euros");
+
+        //Keyboard close on button click below from https://stackoverflow.com/a/27228592
+        try {
+            InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     public void convertRenminbi(View view){
@@ -61,7 +78,16 @@ public class ThirdActivity extends AppCompatActivity {
 
         String result = df.format(conversion);
 
+        image.setImageResource(R.drawable.renminbi);
         numberSumTV.setText(result + " Yuan");
+
+        //Keyboard close on button click below from https://stackoverflow.com/a/27228592
+        try {
+            InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     public void convertCAD(View view){
@@ -73,7 +99,16 @@ public class ThirdActivity extends AppCompatActivity {
 
         String result = df.format(conversion);
 
+        image.setImageResource(R.drawable.cad);
         numberSumTV.setText(result + " CAD");
+
+        //Keyboard close on button click below from https://stackoverflow.com/a/27228592
+        try {
+            InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     public void convertRupees(View view){
@@ -85,7 +120,16 @@ public class ThirdActivity extends AppCompatActivity {
 
         String result = df.format(conversion);
 
+        image.setImageResource(R.drawable.rupee);
         numberSumTV.setText(result + " Rupees");
+
+        //Keyboard close on button click below from https://stackoverflow.com/a/27228592
+        try {
+            InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
     public void convertKRW(View view){
@@ -97,7 +141,16 @@ public class ThirdActivity extends AppCompatActivity {
 
         String result = df.format(conversion);
 
+        image.setImageResource(R.drawable.krw);
         numberSumTV.setText(result + " Won");
+
+        //Keyboard close on button click below from https://stackoverflow.com/a/27228592
+        try {
+            InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 
 }

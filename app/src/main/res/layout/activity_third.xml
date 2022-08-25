@@ -105,7 +105,10 @@
       android:inputType="textPersonName"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      android:imeOptions="actionDone"/>
+      <!--Line to close keyboard: https://stackoverflow.com/questions/2342620/how-to-hide-keyboard-after-typing-in-edittext-in-android-->
+
 
   <TextView
       android:id="@+id/resultCurrency"

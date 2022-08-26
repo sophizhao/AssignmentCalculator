@@ -136,7 +136,7 @@ public class ThirdActivity extends AppCompatActivity {
 
         try{
             double num1 = Double.parseDouble((number1ET.getText().toString()));
-            double conversion = (num1 * 79.78);
+            double conversion = (num1 * 79.88);
 
             String result = df.format(conversion);
 

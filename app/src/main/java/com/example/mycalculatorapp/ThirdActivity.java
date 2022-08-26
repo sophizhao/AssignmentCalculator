@@ -31,13 +31,21 @@ public class ThirdActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1Currency);
         TextView numberSumTV = findViewById(R.id.resultCurrency);
 
-        double num1 = Double.parseDouble((number1ET.getText().toString()));
-        double pounds = (num1 * 0.85);
+        try{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double pounds = (num1 * 0.85);
 
-        String result = df.format(pounds);
+            String result = df.format(pounds);
 
-        image.setImageResource(R.drawable.pound);
-        numberSumTV.setText(result + " Pounds");
+            /* All ImageView code (lines 25 and the repeated two lines below)
+             * learned from https://developer.android.com/reference/android/widget/ImageView
+             */
+            https://developer.android.com/reference/android/widget/ImageView
+            image.setImageResource(R.drawable.pound);
+            numberSumTV.setText(result + " Pounds");
+        } catch (Exception e){
+            numberSumTV.setText("Input a valid number!");
+        }
 
         //Keyboard close on button click below from https://stackoverflow.com/a/27228592
         try {
@@ -52,14 +60,17 @@ public class ThirdActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1Currency);
         TextView numberSumTV = findViewById(R.id.resultCurrency);
 
-        double num1 = Double.parseDouble((number1ET.getText().toString()));
-        double conversion = (num1 * 1.01);
+        try{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double conversion = (num1 * 1.01);
 
-        String result = df.format(conversion);
+            String result = df.format(conversion);
 
-        image.setImageResource(R.drawable.euro);
-        numberSumTV.setText(result + " Euros");
-
+            image.setImageResource(R.drawable.euro);
+            numberSumTV.setText(result + " Euros");
+        } catch (Exception e){
+            numberSumTV.setText("Input a valid number!");
+        }
         //Keyboard close on button click below from https://stackoverflow.com/a/27228592
         try {
             InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
@@ -73,13 +84,17 @@ public class ThirdActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1Currency);
         TextView numberSumTV = findViewById(R.id.resultCurrency);
 
-        double num1 = Double.parseDouble((number1ET.getText().toString()));
-        double conversion = (num1 * 6.87);
+        try{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double conversion = (num1 * 6.87);
 
-        String result = df.format(conversion);
+            String result = df.format(conversion);
 
-        image.setImageResource(R.drawable.renminbi);
-        numberSumTV.setText(result + " Yuan");
+            image.setImageResource(R.drawable.renminbi);
+            numberSumTV.setText(result + " Yuan");
+        } catch (Exception e){
+            numberSumTV.setText("Input a valid number!");
+        }
 
         //Keyboard close on button click below from https://stackoverflow.com/a/27228592
         try {
@@ -94,13 +109,17 @@ public class ThirdActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1Currency);
         TextView numberSumTV = findViewById(R.id.resultCurrency);
 
-        double num1 = Double.parseDouble((number1ET.getText().toString()));
-        double conversion = (num1 * 1.30);
+        try{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double conversion = (num1 * 1.30);
 
-        String result = df.format(conversion);
+            String result = df.format(conversion);
 
-        image.setImageResource(R.drawable.cad);
-        numberSumTV.setText(result + " CAD");
+            image.setImageResource(R.drawable.cad);
+            numberSumTV.setText(result + " CAD");
+        } catch (Exception e){
+            numberSumTV.setText("Input a valid number!");
+        }
 
         //Keyboard close on button click below from https://stackoverflow.com/a/27228592
         try {
@@ -115,13 +134,17 @@ public class ThirdActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1Currency);
         TextView numberSumTV = findViewById(R.id.resultCurrency);
 
-        double num1 = Double.parseDouble((number1ET.getText().toString()));
-        double conversion = (num1 * 79.78);
+        try{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double conversion = (num1 * 79.78);
 
-        String result = df.format(conversion);
+            String result = df.format(conversion);
 
-        image.setImageResource(R.drawable.rupee);
-        numberSumTV.setText(result + " Rupees");
+            image.setImageResource(R.drawable.rupee);
+            numberSumTV.setText(result + " Rupees");
+        } catch (Exception e){
+            numberSumTV.setText("Input a valid number!");
+        }
 
         //Keyboard close on button click below from https://stackoverflow.com/a/27228592
         try {
@@ -136,13 +159,17 @@ public class ThirdActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.num1Currency);
         TextView numberSumTV = findViewById(R.id.resultCurrency);
 
-        double num1 = Double.parseDouble((number1ET.getText().toString()));
-        double conversion = (num1 * 1342.46);
+        try{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double conversion = (num1 * 1342.46);
 
-        String result = df.format(conversion);
+            String result = df.format(conversion);
 
-        image.setImageResource(R.drawable.krw);
-        numberSumTV.setText(result + " Won");
+            image.setImageResource(R.drawable.krw);
+            numberSumTV.setText(result + " Won");
+        } catch (Exception e){
+            numberSumTV.setText("Input a valid number!");
+        }
 
         //Keyboard close on button click below from https://stackoverflow.com/a/27228592
         try {

@@ -29,7 +29,14 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             sum = num1 + num2;
-            numberSumTV.setText("" + sum);
+            String strResult = ""+ sum;
+            // Integer check from https://stackoverflow.com/a/9909417
+            // Reasoning: If a double mod 1 gives a remainder of 0, it means
+            // 1 fits into the number, so it is an integer.
+            if(num1 % 1 == 0 && num2 % 1 == 0){
+                strResult = strResult.substring(0,strResult.length()-2);
+            }
+            numberSumTV.setText(strResult);
         } catch (Exception e){
             numberSumTV.setText("Input valid numbers!");
         }
@@ -53,7 +60,14 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             difference = num1 - num2;
-            numberSumTV.setText("" + difference);
+            String strResult = ""+ difference;
+            // Integer check from https://stackoverflow.com/a/9909417
+            // Reasoning: If a double mod 1 gives a remainder of 0, it means
+            // 1 fits into the number, so it is an integer.
+            if(num1 % 1 == 0 && num2 % 1 == 0){
+                strResult = strResult.substring(0,strResult.length()-2);
+            }
+            numberSumTV.setText(strResult);
         } catch (Exception e){
             numberSumTV.setText("Input valid numbers!");
         }
@@ -78,7 +92,14 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             product = num1 * num2;
-            numberSumTV.setText("" + product);
+            String strResult = ""+ product;
+            // Integer check from https://stackoverflow.com/a/9909417
+            // Reasoning: If a double mod 1 gives a remainder of 0, it means
+            // 1 fits into the number, so it is an integer.
+            if(num1 % 1 == 0 && num2 % 1 == 0){
+                strResult = strResult.substring(0,strResult.length()-2);
+            }
+            numberSumTV.setText(strResult);
         } catch (Exception e){
             numberSumTV.setText("Input valid numbers!");
         }
@@ -102,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             quotient = num1 / num2;
-            numberSumTV.setText("" + quotient);
+            String strResult = ""+ quotient; //still double because int division can be double
+            numberSumTV.setText(strResult);
         } catch (Exception e){
             numberSumTV.setText("Input valid numbers!");
         }
